@@ -41,5 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add("active");
         }
     });
+
+    document.querySelectorAll('.highlight-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const link = card.getAttribute('data-link');
+            if (link) {
+                window.location.href = link;
+            }
+        });
+    });
     
 });
