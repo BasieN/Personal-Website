@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curriculum Vitae | Basetsana Nteta</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     </head>
     <body>
 
         <header class="site-header">
             <div class="nav-container">
-                <div class="logo">Basetsana Nteta</div>
+                <a href="index.html" class="logo">Basetsana Nteta</a>
 
                 <button class="hamburger" aria-label="Toggle navigation">
                     <span></span>
@@ -45,9 +46,22 @@
 
         <div class="nav-overlay"></div>
 
-        <main>
-            <h1>Curriculum Vitae</h1>
-            <p>A downloadable version of my curriculum vitae is provided for reference.</p>
+        <main class="cv-page">
+
+            <section class="cv-intro">
+                <h1 class="page-title">Curriculum Vitae</h1>
+                <p class="page-intro">
+                    A structured overview of my academic journey, practical experience, and professional growth within computing — available as a downloadable CV below.
+                    <p class="cv-updated">Last Updated: February 2026</p>
+                </p>
+            </section>
+
+            <section class="cv-preview">
+                <div id="pdf-container"></div>
+                <a href="Assets/Documents/CV Basetsana Nteta.pdf" class="btn btn-primary"download>
+                    Download CV
+                </a>
+            </section>
         </main>
 
         <footer>
@@ -55,6 +69,35 @@
         </footer>
 
         <script src="js/main.js"></script>
+
+        <script>
+            const url = "Assets/Documents/CV Basetsana Nteta.pdf";
+
+            pdfjsLib.getDocument(url).promise.then(function(pdf) {
+                const container = document.getElementById("pdf-container");
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    pdf.getPage(pageNum).then(function(page) {
+
+                        const scale = 1.3;
+                        const viewport = page.getViewport({ scale: scale });
+
+                        const canvas = document.createElement("canvas");
+                        const context = canvas.getContext("2d");
+
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        container.appendChild(canvas);
+
+                        page.render({
+                            canvasContext: context,
+                            viewport: viewport
+                        });
+                    });
+                }
+            });
+        </script>
 
     </body>
 </html>
