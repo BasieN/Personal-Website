@@ -39,10 +39,19 @@ body.no-scroll {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: inherit;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 /* ===== NAVIGATION SECTION ===== */
@@ -188,7 +197,7 @@ footer {
     z-index: 1000;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HOME SECTION ===== */
 
 .hero {
     display: flex;
@@ -197,54 +206,78 @@ footer {
     text-align: center;
 }
 
+.ai-story {
+    margin-top: 20px;
+}
+
+.ai-main-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.ai-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.ai-text {
+    flex: 0 0 75;
+}
+
+.ai-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ai-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.ai-full-text {
+    max-width: 100%;
+}
+
+.ai-full-text {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.this-guy {
+    position: relative;
+    font-weight: bold;
+}
+
+.arrow {
+    margin-left: 8px;
+}
+
+.indented-list {
+    padding-left: 2rem;
+}
+
+.ai-image {
+    flex: 0 0 25;
+    text-align: center;
+}
+
+.ai-image img {
+    max-width: 50%;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
 .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
-
-/* ===== HOME HIGHLIGHTS ===== */
-
-.home-highlights {
-    padding: 0;
-}
-
-.highlights-container {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.highlight-card {
-    background: #ffffff;
-    padding: 1.8rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 1px solid #eee;
-}
-
-.highlight-card h3 {
-    margin-bottom: 1rem;
-    color: #007acc;
-    font-size: 1.2rem;
-}
-
-.highlight-card p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border-color: #007acc;
-}
-
-/* ===== BUTTONS ON HOME PAGE ===== */
 
 .btn {
     display: inline-block;
@@ -475,17 +508,6 @@ footer {
     color: #007acc;
 }
 
-.project-card p {
-    margin-bottom: 1.2rem;
-    line-height: 1.6;
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
 .tech-tags {
     margin: 0.8rem 0 1rem 0;
     display: flex;
@@ -501,6 +523,61 @@ footer {
     border: 1px solid #d0d7de;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+.project-card p {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px;
+    color: #007acc;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-btn i {
+    font-size: 1.2rem;
+    transform: transform 0.3s ease;
+}
+
+.project-btn .btn-label {
+    opacity: 0;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+}
+
+.project-btn:hover {
+    width: 130px;
+    background: #007acc;
+    color: #fff;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.project-btn:hover .btn-label {
+    opacity: 1;
+}
+
+.project-btn:hover i {
+    transform: scale(1.05);
 }
 
 /* ===== CV PAGE ===== */
@@ -651,6 +728,28 @@ footer {
 
     .contact-info {
         padding: 2rem;
+    }
+
+    .project-btn {
+        width: auto;
+        height: auto;
+        padding: 0.6rem 1rem;
+        border: 2px solid #007acc;
+    }
+
+    .project-btn .btn-label {
+        opacity: 1;
+        margin-left: 0.5rem;
+    }
+
+    .ai-story {
+        padding: 0;
+        max-width: 100%;
+        margin-top: 20px; /* removes large gap from previous section */
+    }
+
+    .ai-image img {
+        max-width: 100%;
     }
 
 }
