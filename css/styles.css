@@ -39,29 +39,21 @@ body.no-scroll {
 }
 
 .logo {
-<<<<<<< HEAD
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 600;
     font-size: 1.3rem;
-=======
-    font-weight: 600;
-    font-size: 1.2rem;
->>>>>>> f603c987e25811463f86ed8748321288970904a5
     text-decoration: none;
     color: inherit;
 }
 
-<<<<<<< HEAD
 .logo-icon {
     width: 32px;
     height: 32px;
     object-fit: contain;
 }
 
-=======
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 /* ===== NAVIGATION SECTION ===== */
 
 .nav-container {
@@ -205,11 +197,7 @@ footer {
     z-index: 1000;
 }
 
-<<<<<<< HEAD
 /* ===== HOME SECTION ===== */
-=======
-/* ===== HERO SECTION ===== */
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 
 .hero {
     display: flex;
@@ -218,7 +206,6 @@ footer {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .ai-story {
     margin-top: 20px;
 }
@@ -285,8 +272,6 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-=======
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 .hero-buttons {
     display: flex;
     justify-content: center;
@@ -294,51 +279,6 @@ footer {
     flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-=======
-/* ===== HOME HIGHLIGHTS ===== */
-
-.home-highlights {
-    padding: 0;
-}
-
-.highlights-container {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.highlight-card {
-    background: #ffffff;
-    padding: 1.8rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 1px solid #eee;
-}
-
-.highlight-card h3 {
-    margin-bottom: 1rem;
-    color: #007acc;
-    font-size: 1.2rem;
-}
-
-.highlight-card p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border-color: #007acc;
-}
-
-/* ===== BUTTONS ON HOME PAGE ===== */
-
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -568,20 +508,6 @@ footer {
     color: #007acc;
 }
 
-<<<<<<< HEAD
-=======
-.project-card p {
-    margin-bottom: 1.2rem;
-    line-height: 1.6;
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 .tech-tags {
     margin: 0.8rem 0 1rem 0;
     display: flex;
@@ -599,7 +525,6 @@ footer {
     letter-spacing: 0.5px;
 }
 
-<<<<<<< HEAD
 .project-card p {
     margin-bottom: 1.2rem;
     line-height: 1.6;
@@ -655,8 +580,6 @@ footer {
     transform: scale(1.05);
 }
 
-=======
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 /* ===== CV PAGE ===== */
 
 .cv-page {
@@ -807,7 +730,6 @@ footer {
         padding: 2rem;
     }
 
-<<<<<<< HEAD
     .project-btn {
         width: auto;
         height: auto;
@@ -830,6 +752,4 @@ footer {
         max-width: 100%;
     }
 
-=======
->>>>>>> f603c987e25811463f86ed8748321288970904a5
 }
